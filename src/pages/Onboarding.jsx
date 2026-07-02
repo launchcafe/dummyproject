@@ -23,37 +23,38 @@ export default function Onboarding() {
 
         <Card>
           <h2 className="text-lg font-semibold text-gray-900">Complete your profile</h2>
+          {/* Launch Café fix: copy now reflects that only 2 fields are required */}
           <p className="mt-1 text-sm text-gray-600">
-            We need a few more details before you can invite your team.
+            Just your name and role to continue — the rest is optional and can be added later.
           </p>
 
+          {/* Launch Café fix: 62% drop-off on this step (6,050 users/week) vs. a
+              15% funnel average — driven by 6 required fields. Only full name
+              and role are needed to continue; the rest are now optional and
+              can be filled in later from settings. */}
           <form className="mt-6 flex flex-col gap-4">
             <Input label="Full name" name="full_name" placeholder="Jane Doe" required />
             <Input label="Role" name="role" placeholder="e.g. Operations Manager" required />
             <Input
-              label="Team size"
+              label="Team size (optional)"
               name="team_size"
               type="number"
               placeholder="e.g. 12"
-              required
             />
             <Input
-              label="Company logo URL"
+              label="Company logo URL (optional)"
               name="company_logo"
               placeholder="https://example.com/logo.png"
-              required
             />
             <Input
-              label="Short bio"
+              label="Short bio (optional)"
               name="bio"
               placeholder="Tell us a bit about your role"
-              required
             />
             <Input
-              label="Timezone"
+              label="Timezone (optional)"
               name="timezone"
               placeholder="e.g. America/New_York"
-              required
             />
 
             <div className="mt-4 flex justify-between">
