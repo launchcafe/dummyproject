@@ -30,30 +30,27 @@ export default function Onboarding() {
           <form className="mt-6 flex flex-col gap-4">
             <Input label="Full name" name="full_name" placeholder="Jane Doe" required />
             <Input label="Role" name="role" placeholder="e.g. Operations Manager" required />
+            {/* Launch Café fix: onboarding_step_3 had 62% drop-off (6,050 users/week) across 6 required fields; team_size, company_logo, bio, and timezone are non-essential to unblock the funnel, so they're now optional */}
             <Input
-              label="Team size"
+              label="Team size (optional)"
               name="team_size"
               type="number"
               placeholder="e.g. 12"
-              required
             />
             <Input
-              label="Company logo URL"
+              label="Company logo URL (optional)"
               name="company_logo"
               placeholder="https://example.com/logo.png"
-              required
             />
             <Input
-              label="Short bio"
+              label="Short bio (optional)"
               name="bio"
               placeholder="Tell us a bit about your role"
-              required
             />
             <Input
-              label="Timezone"
+              label="Timezone (optional)"
               name="timezone"
               placeholder="e.g. America/New_York"
-              required
             />
 
             <div className="mt-4 flex justify-between">
